@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <UserInput />
-        <UserOutput />
+        <UserOutput username="Max" />
       </div>
     );
   }
