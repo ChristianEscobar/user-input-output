@@ -9,11 +9,23 @@ class App extends Component {
     username: 'Brownie'
   }
 
+  userNameHandler = (event) => {
+    this.setState({
+        username: event.target.value
+      }
+    )
+  }
+
   render() {
     return (
       <div className="App">
-        <UserInput />
-        <UserOutput username={this.state.username} />
+        <UserInput 
+          username={this.state.username}
+          changeUserName={this.userNameHandler}
+        />
+        <UserOutput 
+          username={this.state.username} 
+        />
       </div>
     );
   }
